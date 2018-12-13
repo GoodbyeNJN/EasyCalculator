@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>网页计算器</title>
+        <style>
+            #container {
+                width: 302px;
+                margin: auto;
+                font: 700 24px Arial;
+                color: #fff;
+                background: #000;
+            }
+            #title p {
+                margin: 0;
+                font: 400 12px Arial;
+                text-align: center;
+            }
+            #screen {
+                height: 84px;
+                color: #000;
+                background: url("http://www.fgm.cc/learn/lesson3/img/inputBg.jpg") repeat-x;
+            }
+            #screen p#formula {
+                height: 15px;
+                line-height: 15px;
+                margin: 0;
+                padding: 5px 15px 5px 0px;
+                font-size: 12px;
+                text-align: right;
+            }
+            #screen p#input {
+                height: 59px;
+                line-height: 59px;
+                margin: 0;
+                padding: 0 10px;
+                font-size: 50px;
+                text-align: right;
+            }
+            #buttons ul {
+                display: flex;
+                flex-wrap: wrap;
+                height: 307px;
+                margin: 0;
+                padding: 0 5px 0 5px;
+                list-style-type: none;
+            }
+            #buttons ul li {
+                display: inline-block;
+                width: 63px;
+                height: 41px;
+                line-height: 41px;
+                margin: 17px 5px 0 5px;
+                text-align: center;
+                border-radius: 5px;
+                background: url("http://www.fgm.cc/learn/lesson3/img/btn.png");
+                cursor: pointer;
+            }
+            #buttons ul li.black {
+                background-position: 0 0;
+            }
+            #buttons ul li.brown {
+                background-position: 0 -41px;
+            }
+            #buttons ul li#btn-0 {
+                width: 136px;
+                background-position: 0 -82px;
+            }
+            #buttons ul li#btn-\= {
+                position: relative;
+                top: -58px;
+                height: 99px;
+                line-height: 99px;
+                background-position: 0 -164px;
+            }
+            #buttons ul li.black:hover {
+                background-position: -63px 0;
+            }
+            #buttons ul li.brown:hover {
+                background-position: -63px -41px;
+            }
+            #buttons ul li#btn-0:hover {
+                width: 136px;
+                background-position: 0 -123px;
+            }
+            #buttons ul li#btn-\=:hover {
+                position: relative;
+                top: -58px;
+                height: 99px;
+                line-height: 99px;
+                background-position: -63px -164px;
+            }
+        </style>
+        <script src="jquery.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="title"><p>网页计算器</p></div>
+            <div id="screen">
+                <p id="formula"></p>
+                <p id="input">0</p>
+            </div>
+            <div id="buttons">
+                <ul>
+                    <li class="brown" id="btn-c">c</li>
+                    <li class="brown" id="btn-%">%</li>
+                    <li class="brown" id="btn-/">÷</li>
+                    <li class="brown" id="btn-*">×</li>
+                    <li class="black" id="btn-7">7</li>
+                    <li class="black" id="btn-8">8</li>
+                    <li class="black" id="btn-9">9</li>
+                    <li class="brown" id="btn--">-</li>
+                    <li class="black" id="btn-4">4</li>
+                    <li class="black" id="btn-5">5</li>
+                    <li class="black" id="btn-6">6</li>
+                    <li class="brown" id="btn-+">+</li>
+                    <li class="black" id="btn-1">1</li>
+                    <li class="black" id="btn-2">2</li>
+                    <li class="black" id="btn-3">3</li>
+                    <li class="black" id="btn-0">0</li>
+                    <li class="black" id="btn-.">.</li>
+                    <li class="orange" id="btn-=">=</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
